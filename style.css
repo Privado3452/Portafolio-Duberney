@@ -1,0 +1,282 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Establece márgenes y rellenos a 0 para resetear los estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Establece la fuente principal para el cuerpo del documento */
+body {
+    font-family: "poppins", sans-serif;
+}
+
+/* Habilita el desplazamiento suave al hacer clic en enlaces internos */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define el color del texto para los párrafos */
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+a,
+.btn {
+    /* Agrega una transición suave para los efectos de enlaces y botones */
+    transition: all 300ms ease;
+}
+
+/* Estilos para la barra de navegación en dispositivos de escritorio */
+nav {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+/* Estilos para los enlaces en estado normal */
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+/* Estilos para los enlaces al pasar el ratón sobre ellos */
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Estilos para el logo */
+.logo {
+    font-size: 2rem;
+}
+
+/* Estilos para el logo al pasar el ratón sobre él */
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+/* Oculta el menú hamburguesa en dispositivos no móviles */
+#hamburger-nav {
+    display: none;
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el icono de menú hamburguesa */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Estilos para las barras del icono de menú hamburguesa */
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+/* Estilos para los enlaces del menú desplegable */
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+/* Elimina los puntos en los elementos de la lista */
+.menu-links li {
+    list-style: none;
+}
+
+/* Abre el menú desplegable */
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* Anima las barras del icono al abrir el menú desplegable */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Restaura las barras del icono a su posición original */
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* Restaura la opacidad de la primera barra del icono */
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+/* Restaura las barras del icono a su posición original */
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+/* Estilos generales para las secciones */
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* Contenedor flexible para las secciones */
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+/* Estilos para la sección de perfil */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+/* Contenedor de imagen en la sección de perfil */
+.section_pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* Estilos para el texto en la sección de perfil */
+.section_text {
+    align-self: center;
+    text-align: center;
+}
+
+/* Estilos para los párrafos en la sección de perfil */
+.section_text p {
+    font-weight: 600;
+}
+
+/* Estilos para el primer párrafo en la sección de perfil */
+.section_text_p1 {
+    text-align: center;
+}
+
+/* Estilos para el segundo párrafo en la sección de perfil */
+.section_text_p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el título en la sección de perfil */
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Contenedor para los iconos de redes sociales */
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+/* Estilos generales para los íconos */
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+/* Contenedor flexible para los botones */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilos generales para los botones */
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+/* Estilos para los botones con color 1 */
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+/* Estilos para los botones con color 1 al pasar el ratón sobre ellos */
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+/* 2 al pasar el ratón sobre ellos */
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+/* Estilos para los botones con color 1 al pasar el ratón sobre ellos */
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+/* Estilos para los botones con color 2 */
+.btn-color-2 {
+    background: none;
+}
+
+/* Estilos para los botones con color 2 al pasar el ratón sobre ellos */
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+/* Ajustes adicionales para el contenedor de botones */
+.btn-container {
+    gap: 1rem;
+}
