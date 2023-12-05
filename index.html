@@ -2,27 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potafolio - Duberney Lopez Lopez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <body>
+    <!-- menu desktop-nav -->
     <nav id="desktop-nav">
-        <div class="logo">Duberney Lopez </div>
+        <div class="logo">Duberney Lopez</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
+    <!-- menu movil-nav -->
     <nav id="hamburger-nav">
-        <div class="logo">Duberney Lopez </div>
+        <div class="logo">Duberney Lopez Lopez</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -35,50 +37,51 @@
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
-        </div>
     </nav>
+
+    <!-- seccion profile-->
     <section id="profile">
-        <div class="section_pic-container">
-            <img src="./assets/profile-pic.png" alt="Duberney Lopez Lopez profile picture" />
+        <div class="section__pic-container">
+            <img src="assets/profile-pic.jpeg" alt="profile-pic" class="section__pic">
         </div>
-        <div class="section_text">
-            <p class="section_text_p1">Hello, I'm</p>
-            <h1 class="title">Duberney Lopez </h1>
-            <p class="section_text_p2">Frontend Developer</p>
+        <div class="section__text">
+
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Duberney Lopez</h1>
+            <p class="section_text_p2">Estudiante SENA</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download
-                    CV</button>
-                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+                <button class="btn btn-color-2" onclick="window.open('assets/resume-example.pdf')"> Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="scrollToSection('contact')">Contact Info </button>
             </div>
+
             <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-                    onclick="location.href='https:www.linkedin.com'" />
-                <img src="./assets/github.png" alt="My Github profile" class="icon"
-                    onclick="location.href='https:https:https://github.com/Privado3452'" />
+                <img src="assets/linkedin.png" alt="My LinkedIn Profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/duberney-lopez-lopez-45436220b'">
+                <img src="assets/github.png" alt="My GitHub Profile" class="icon"
+                    onclick="location.href='https://github.com/Privado3452'">
             </div>
-                <span></span>
-                <span></span>
-                <span></span>
         </div>
     </section>
+    <!-- seccion about-->
     <section id="about">
-        <p class="section_text_p1">Get To Know More</p>
+        <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
         <div class="section-container">
-            <div class="section_pic-container">
-                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.jpeg" alt="Profile picture" class="about-pic" />
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
                         <img src="./assets/experience.png" alt="Experience icon" class="icon" />
                         <h3>Experience</h3>
-                        <p>2+ years <br />Front-end Development</p>
+                        <p>2+ years <br />Frontend Development</p>
                     </div>
                     <div class="details-container">
                         <img src="./assets/education.png" alt="Education icon" class="icon" />
                         <h3>Education</h3>
-                        <p>Software Engineering<br />MinTic<br />Platzi</p>
+                        <p>Academic bachelor<br />system technique</p>
                     </div>
                 </div>
                 <div class="text-container">
@@ -90,16 +93,15 @@
                         technologies and development environments. My experience includes collaboration <br><br>
                         in cross-functional teams, which highlights my ability to communicate <br><br>
                         effectively and contribute to the joint success of complex projects.
-
                     </p>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow-down.png" alt="Arrow down" class="arrow-down" onclick="location.href='#experience'" />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
     <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -150,19 +152,26 @@
                     </div>
                 </div>
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <h2 class="experience-sub-title">Frontend Development</h2>
                     <div class="article-container">
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
-                                <h3>Node.js</h3>
+                                <h3>PostgreSQL</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                            <div>
+                                <h3>Node JS</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                             <div>
-                                <h3>Express.js</h3>
+                                <h3>Express JS</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
@@ -177,10 +186,10 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow-down.png" alt="Arrow down" class="arrow-down" onclick="location.href='#projects'" />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
     <section id="projects">
-        <p class="section_text_p1">Browse My Recent</p>
+        <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
@@ -190,10 +199,12 @@
                     </div>
                     <h2 class="experience-sub-title project-title">Project One</h2>
                     <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live
-                            Demo</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Privado3452/Array_js'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://privado3452.github.io/Array_js/'">
+                            Live Demo
+                        </button>
                     </div>
                 </div>
                 <div class="details-container color-container">
@@ -202,10 +213,12 @@
                     </div>
                     <h2 class="experience-sub-title project-title">Project Two</h2>
                     <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live
-                            Demo</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Privado3452/Curriculum-vita'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://privado3452.github.io/Curriculum-vita/'">
+                            Live Demo
+                        </button>
                     </div>
                 </div>
                 <div class="details-container color-container">
@@ -214,27 +227,29 @@
                     </div>
                     <h2 class="experience-sub-title project-title">Project Three</h2>
                     <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/'">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live
-                            Demo</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Privado3452/Portafolio-Duberney'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow-down.png" alt="Arrow down" class="arrow-down" onclick="location.href='#contact'" />
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
     <section id="contact">
-        <p class="section_text_p1">Get in Touch</p>
+        <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:Daniele_fernandezb@soy.sena.edu.co">duberneylopezlopez1@gmail.com</a></p>
+                <p><a href="mailto:examplemail@gmail.com">duberneylopezlopez1@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
                 <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+                <p><a href="https://www.linkedin.com/in/duberney-lopez-lopez-45436220b"></a></p>
             </div>
         </div>
     </section>
@@ -249,7 +264,7 @@
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; Duberney Lopez Lopez. All Rights Reserved.</p>
+        <p>Copyright &#169; 2023 Duberney Lopez Lopez. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
